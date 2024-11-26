@@ -2,9 +2,30 @@
 
 A Python script for extracting usernames from a graphical interface (e.g., a Telegram chat) and saving them to a file.
 
+---
+
 ## Overview
 
 This script automates the process of navigating through a graphical user interface to collect usernames and stores them in a `.txt` file. It uses the `pyautogui` library for mouse and keyboard automation and `pyperclip` for clipboard handling.
+
+---
+
+## Setup Instructions
+
+### Step 1: Calibrate Cursor Coordinates
+Before starting the parsing process, calibrate the cursor coordinates using the `calibrator.py` script:
+1. A red square will appear on the screen. Move the cursor to its center.
+2. Use the script to print the cursor's current coordinates.
+3. Update the `START_X` and `START_Y` values in `config.py` with the calibrated coordinates.
+
+### Step 2: Prepare Interface Screenshots
+To adapt the script to your specific interface:
+1. Take screenshots of the required UI elements (`name.png` and `back.png`).
+2. Save them in the specified directory.
+   - Example screenshots are available in the `src` folder.
+
+### Step 3: Start Parsing
+Run the main script to begin extracting usernames. Make sure the application window is active and properly positioned.
 
 ---
 
@@ -22,9 +43,11 @@ This script automates the process of navigating through a graphical user interfa
 ### 3. Navigation and Scrolling
 - After extracting a username (or failing to find one), the script locates the "Back" button (`back.png`) to return to the previous screen.
 - The screen is scrolled down by a specified number of pixels (`SCROLL_PIXELS`) to move to the next user.
-![Untitled](https://github.com/user-attachments/assets/2d95fce4-cc14-4490-916a-a3c3183126ab)
 
-### 4. Error Handling
+### 4. Removing Duplicates
+After parsing, you can clean the `users.txt` file to remove duplicate entries by running the `remove_duplicates()` function.
+
+### 5. Error Handling
 - Errors are caught and logged to ensure the script continues running.
 - You can interrupt the script at any time with `Ctrl+C`.
 
