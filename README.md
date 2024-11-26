@@ -22,6 +22,7 @@ This script automates the process of navigating through a graphical user interfa
 ### 3. Navigation and Scrolling
 - After extracting a username (or failing to find one), the script locates the "Back" button (`back.png`) to return to the previous screen.
 - The screen is scrolled down by a specified number of pixels (`SCROLL_PIXELS`) to move to the next user.
+![Untitled](https://github.com/user-attachments/assets/2d95fce4-cc14-4490-916a-a3c3183126ab)
 
 ### 4. Error Handling
 - Errors are caught and logged to ensure the script continues running.
