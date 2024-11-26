@@ -16,7 +16,8 @@ This script automates the process of navigating through a graphical user interfa
 Before starting the parsing process, calibrate the cursor coordinates using the `calibrator.py` script:
 1. A red square will appear on the screen. Move the cursor to its center.
 2. Use the script to print the cursor's current coordinates.
-3. Update the `START_X` and `START_Y` values in `config.py` with the calibrated coordinates.
+3. Update the `START_X` and `START_Y` values in `config.py` with the calibrated coordinates [red square].
+![Untitled](https://github.com/user-attachments/assets/21b85dac-6ad0-4dc1-a20b-a38b55d95865)
 
 ### Step 2: Prepare Interface Screenshots
 To adapt the script to your specific interface:
